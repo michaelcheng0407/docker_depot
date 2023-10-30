@@ -12,16 +12,16 @@ pip-compile requirements.in
 ```
 
 ### JupyterLab configuration
-- The `overrides.json` file allows customizing the default JupyterLab settings. This can be used to set the theme, default file viewer, etc.
+- The `overrides.json` file allows customizing the default JupyterLab settings. This can be used to set the theme, behaviour, etc.
 
 ### Mount local notebooks folder 
 
-In `docker-compose.yaml`, specify the local host folder containing your notebooks to mount into the container:
+In `docker-compose.yaml`, specify the local host folder containing your notebooks to bind into the container:
 
 ```yaml
 volumes:
-  - /path/to/notebooks:/Python Notebook
-```
+  - {notebooks folder}:/Python Notebook
+``` 
 
 ### Build and starting the image
 ```
