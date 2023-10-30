@@ -1,0 +1,21 @@
+# This file is used to build the docker image for jupyterlab
+# If you need more help, visit the Docker compose reference guide at
+# https://docs.docker.com/compose/compose-file/
+
+services:
+  notebook_server:
+    build: ./
+    image: jupyterlab
+    container_name: jupyterlab
+    
+# Specify the port that you want to expose to the host machine
+    ports:
+      - 8888:8888
+    stdin_open: true
+    tty: true
+
+# Specify the localhost folder that stores your notebooks to be binded to the container
+    volumes:
+      - '//d/Python Notebook:/Python Notebook'
+
+
