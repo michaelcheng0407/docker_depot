@@ -1,0 +1,17 @@
+# This file is used to build the docker image for jupyterlab
+# If you need more help, visit the Docker compose reference guide at
+# https://docs.docker.com/compose/compose-file/
+
+services:
+  notebook_server:
+    build:
+      context: ./
+      args:
+        - PYTHON_VERSION=3.11.6
+        - ALPINE_VERSION=3.18.4
+        - NODEJS_VERSION=20.9.0
+    image: pythonnodejs
+    container_name: pythonnodejs
+    stdin_open: true
+    tty: true
+
