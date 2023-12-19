@@ -3,7 +3,7 @@
 # https://docs.docker.com/compose/compose-file/
 
 services:
-  notebook_server:
+  pythonnodejs:
     build:
       context: ./
       args:
